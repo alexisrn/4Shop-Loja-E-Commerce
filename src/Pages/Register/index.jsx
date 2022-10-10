@@ -18,7 +18,7 @@ export function Register() {
     if(!email | !password | !passwordConf){
       setError("Preencha todos os campos");
       return;
-    }else if(password === passwordConf){
+    }else if(password != passwordConf){
       setError("As senhas não são iguais");
       return;
     }
