@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as S from "./styles";
 import { Link } from "react-router-dom";
+import { ItemCard } from "../ItemCard";
 
 export function Products() {
   const [item, setItem] = useState([]);
@@ -8,6 +9,16 @@ export function Products() {
     fetch("https://fakestoreapi.com/products?limit=8")
       .then((res) => res.json())
       .then((json) => setItem(json));
+  };
+
+  const filterItens = (name) => {
+    let filterItens = [];
+    for (let i in item) {
+      if (item[i].data.name.includes(name)) {
+        filterItens.push(item[i]);
+      }
+    }
+    setItem(filterItens);
   };
 
   useEffect(() => {
@@ -19,20 +30,16 @@ export function Products() {
         {item
           ? item.map((product) => {
               return (
-                <S.Card key={product.id}>
-                <Link to={`/${product.id}`}>
-                <S.CtnImg>
-                  <S.Img>
-                    <img src={product.image} alt="" />
-                  </S.Img>
-                </S.CtnImg>
-                <S.CtnDescription>
-                  <S.Description>{product.category}</S.Description>
-                  <S.Title>{product.title}</S.Title>
-                  <S.Price>${product.price}</S.Price>
-                </S.CtnDescription>
-                </Link>
-              </S.Card>
+                <>
+                  <ItemCard
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    category={product.category}
+                  />
+                </>
               );
             })
           : null}

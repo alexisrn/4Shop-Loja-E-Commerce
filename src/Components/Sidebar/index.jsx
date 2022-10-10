@@ -32,7 +32,6 @@ export const Sidebard = ({ active }) => {
                 </li>
               </Link>
               <Link to="/eletronics">
-                {" "}
                 <li>
                   <RiComputerFill /> Eletronicos
                 </li>

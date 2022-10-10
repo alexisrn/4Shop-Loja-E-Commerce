@@ -8,12 +8,7 @@ export function Header() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if(!search) return;
-    navigate(`/searchq=${search}`);
-    setSearch('')
-  };
+
 
   return (
     <S.Container>
@@ -22,7 +17,7 @@ export function Header() {
           <h1>4SHOP</h1>
         </Link>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form >
         <S.Inputs >
           <S.BtnSearch>
             <BsSearch />

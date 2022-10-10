@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import * as S from "./styles";
 import { Link } from "react-router-dom";
+import { ItemCard } from "../ItemCard";
 
 export function ItensJewelery() {
   const [item, setItem] = useState([]);
@@ -23,20 +24,16 @@ export function ItensJewelery() {
         {item
           ? item.map((product) => {
               return (
-                <S.Card key={product.id}>
-                  <Link to={`/${product.id}`}>
-                  <S.CtnImg>
-                    <S.Img>
-                      <img src={product.image} alt="" />
-                    </S.Img>
-                  </S.CtnImg>
-                  <S.CtnDescription>
-                    <S.Description>{product.category}</S.Description>
-                    <S.Title>{product.title}</S.Title>
-                    <S.Price>${product.price}</S.Price>
-                  </S.CtnDescription>
-                  </Link>
-                </S.Card>
+                <>
+                  <ItemCard
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    category={product.category}
+                  />
+                </>
               );
             })
           : null}

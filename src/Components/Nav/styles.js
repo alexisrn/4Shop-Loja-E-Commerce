@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-display: flex;
-align-items: center;
   background-color: white;
-  padding:20px;
-  column-gap: 10px;
-  span{
+`;
+
+export const Category = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding: 20px;
+  cursor: pointer;
+
+  span {
     font-size: 15px;
   }
+
 `;

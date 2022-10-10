@@ -7,12 +7,22 @@ export function Search() {
     const [item, setItem] = useState([]);
     const query = searchParams.get('q');
 
-    const url = "https://fakestoreapi.com/products?limit=8"
+    const url = "https://fakestoreapi.com/products"
     const getItens = async () => {
       fetch(url)
         .then((res) => res.json())
         .then((json) => setItem(json));
     };
+
+    const filterItens = (name) => {
+      let filterItens = [];
+      for(let i in item){
+        if(item[i].data.name.includes(name)){
+          filterItens.push(item[i]);
+        }
+      }
+      setItem(filterItens);
+    }
   
     useEffect(() => {
       getItens();

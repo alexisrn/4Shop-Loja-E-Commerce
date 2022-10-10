@@ -33,6 +33,12 @@ export const List = styled.div`
     color: black;
     font-size: 25px;
     padding: 10px 0;
+    width: 55%;
+  }
+  li:hover{
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px grey;
   }
   
 `;
