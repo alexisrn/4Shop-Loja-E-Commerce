@@ -1,73 +1,57 @@
 import styled from 'styled-components'
 
-export const CtnSuper = styled.div`
+export const Container = styled.div`
+
+width: 100%;
+`
+
+
+export const Footer = styled.div`
+background-color: black;
+width: 100%;
+height: 300px;
 display: flex;
-flex-direction:column;
-justify-content: center;
 align-items: center;
+flex-direction: column;
+color:white;
 
 `
 
-export const TopFooter = styled.div`
+export const CtnTop = styled.div`
 background-color: black;
-border-bottom: 1px solid grey;
-height: 45vh;
-color:grey;
-display: flex;
-max-width: 100%;
 width: 100%;
-
+height: 300px;
+display: flex;
+align-items: center;
 div{
-    margin-top: 30px;
-    width: 30%;
-    padding: 0 50px;
+    width: 50%;
+    height: 90%;
+    
 }
-
-ul{
-    list-style: none;
+a{
+    text-decoration: none;
+    color: white;
 }
 
 h5{
-    color:white;
-    font-size: 15px;
-}
-
-p{
-
-    row-gap: 10px;
-}
-
-a{
-    text-decoration: none;
     color:grey;
 }
+
 `
 
-
-export const BottomFooter = styled.div`
-height: 20vh;
+export const CtnBot = styled.div`
+border-top: 1px solid #b9b9b9;
 width: 100%;
-color:white;
-background-color: black;
+height: 30vh;
 display: flex;
+justify-content: space-around;
 align-items: center;
-justify-content: space-between;
+`
+export const Icons = styled.div`
+font-size: 20px;
+color:black;
 a{
-    font-size: 30px;
     color:white;
+    padding:10px;
 }
 `
-
-export const Dev = styled.p`
-color:white;
-padding: 0 100px;
-`
-
-export const Links = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-gap:0 20px;
-padding: 0 150px;
-`
-

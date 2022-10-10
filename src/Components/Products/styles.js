@@ -2,34 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items:center;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   height: 100vh;
   gap: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 190px;
   margin-top: 10px;
 
-  Container:hover {
-    transform: scale(1) rotate(2deg);
-  }
 `;
 
 export const Card = styled.div`
-  height: 50%;
+  height: 56%;
   width: 20%;
   background-color: white;
-  cursor: pointer;
+    cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 1px 1px 1px #a4a3a3;
-
-  &:hover {
-    transition: all 0.5s;
-    transform: scale(1.1) rotate(0.5deg);
+  box-shadow: 1px 1px 1px #A4A3A3;
+  &:hover{
+    transition: all .5s;
+    transform: scale(1.1) rotate(0.5deg)
+  
   }
   a{
     text-decoration: none;
@@ -38,19 +34,19 @@ export const Card = styled.div`
 `;
 
 export const Img = styled.div`
-  img {
+img{
     width: 100%;
     height: 100px;
-  }
-`;
+}
+`
 
 export const CtnImg = styled.div`
-  background-color: white;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+background-color: white;
+width: 100%;
+height: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
 `;
 
 export const Text = styled.div`
@@ -62,24 +58,22 @@ export const Text = styled.div`
 `;
 
 export const CtnDescription = styled.div`
-  background-color: white;
-  width: 100%;
-  height: 40%;
- 
-`;
+background-color: white;
+width: 100%;
+height: 40%;
+`
 
 export const Description = styled.p`
-  font-size: 12px;
-  color: #a4a3a3;
-  padding: 0 0px;
-  text-align: center;
-`;
+font-size: 12px;
+color: #A4A3A3;
+padding: 0 10px;
+`
 export const Title = styled.p`
-  text-align: center;
-  font-weight: 500;
-`;
+text-align: center;
+font-weight: 500;
+`
 
 export const Price = styled.p`
-  text-align: center;
-  font-weight: bold;
-`;
+text-align: center;
+font-weight: bold;
+`

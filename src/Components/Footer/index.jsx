@@ -7,8 +7,9 @@ import {Link} from 'react-router-dom';
 export const Footer = () => {
   return (
     <>
-      <S.CtnSuper>
-        <S.TopFooter>
+      <S.Container>
+        <S.Footer>
+          <S.CtnTop>
           <div>
             <ul>
               <h5>Departamentos</h5>
@@ -41,22 +42,17 @@ export const Footer = () => {
               com os seus dados, só aproveitar os nossos produtos.
             </p>
           </div>
-        </S.TopFooter>
-        <S.BottomFooter>
-          <S.Dev> Desenvolvido por Raphael Alexis</S.Dev>
-          <S.Links>
-           <p><a href="https://github.com/alexisrn" tagert="_blank">
-              <FaGithub />
-            </a></p> 
-            <a
-              href="https://www.linkedin.com/in/raphael-alexis-3704531b9/"
-              target="_blank"
-            >
-              <FaLinkedin />
-            </a>
-          </S.Links>
-        </S.BottomFooter>
-      </S.CtnSuper>
+          </S.CtnTop>
+        
+        <S.CtnBot>
+          <p>Desenvolvido por Raphael Alexis</p>
+          <S.Icons>
+     <a href='https://github.com/alexisrn' tagert="_blank"><FaGithub/></a> 
+    <a href='https://www.linkedin.com/in/raphael-alexis-3704531b9/' target="_blank"><FaLinkedin/></a>
+    </S.Icons>
+        </S.CtnBot>
+        </S.Footer>
+      </S.Container>
     </>
   );
 };

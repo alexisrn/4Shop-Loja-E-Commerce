@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.p`
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 30px;
   flex-direction: column;
-    padding: 100px 10px;
+
 `;
 export const ContainerTop = styled.p`
   height: 100%;
@@ -18,6 +18,7 @@ export const ContainerTop = styled.p`
   align-items: center;
   column-gap: 30px;
   border-bottom: 1px solid grey;
+  margin-bottom: 20px;
  
 `;
 export const CtnCenter = styled.div``;
@@ -63,7 +64,11 @@ export const BottomImgs = styled.div`
 
 export const Infs = styled.div`
   width: 35%;
-  margin-bottom: 130px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+
 
   h2 {
     font-size: 35px;

@@ -2,7 +2,7 @@
 import * as S from './styles';
 import { Header } from '../../Components/Header';
 import { Pictures } from "../../Components/Pictures";
-import { Products } from "../../Components/Products/Eletronics";
+import { Products } from "../../Components/Products";
 import { Nav } from "../../Components/Nav";
 import { Footer } from "../../Components/Footer";
 
