@@ -20,7 +20,7 @@ export const Card = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 0%;
+  width: 100%;
     
   }
 `;
@@ -28,8 +28,7 @@ export const Card = styled.div`
 export const Img = styled.div`
 img{
     width: 100%;
-    height  : 100px;
-    padding: 30px 0;
+    height: 100px;
 }
 `
 
