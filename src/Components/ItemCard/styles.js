@@ -20,7 +20,7 @@ export const Card = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 80%;
+  width: 0%;
     
   }
 `;
@@ -29,6 +29,7 @@ export const Img = styled.div`
 img{
     width: 100%;
     height  : 100px;
+    padding: 30px 0;
 }
 `
 
