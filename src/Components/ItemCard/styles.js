@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
 export const Card = styled.div`
-  height: 56%;
-  width: 20%;
+  height:300px;
+  width: 22%;
   background-color: white;
     cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   box-shadow: 1px 1px 1px #A4A3A3;
   &:hover{
     transition: all .5s;
@@ -19,12 +16,19 @@ export const Card = styled.div`
     text-decoration: none;
     color:black;
   }
+@media (max-width: 799px) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+    
+  }
 `;
 
 export const Img = styled.div`
 img{
     width: 100%;
-    height: 100px;
+    height  : 100px;
 }
 `
 
@@ -65,4 +69,12 @@ font-weight: 500;
 export const Price = styled.p`
 text-align: center;
 font-weight: bold;
+`
+
+export const Container = styled.div`
+width: 100%;
+
+display: flex;
+justify-content: center;
+align-items: center;
 `

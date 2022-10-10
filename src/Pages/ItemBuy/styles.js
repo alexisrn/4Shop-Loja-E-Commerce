@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.p`
-  height: 150vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 30px;
   flex-direction: column;
-
+ 
 `;
 export const ContainerTop = styled.p`
   height: 100%;
@@ -19,6 +19,10 @@ export const ContainerTop = styled.p`
   column-gap: 30px;
   border-bottom: 1px solid grey;
   margin-bottom: 20px;
+  @media (max-width: 550px) {
+    
+    flex-direction: column;
+  }
  
 `;
 export const CtnCenter = styled.div``;

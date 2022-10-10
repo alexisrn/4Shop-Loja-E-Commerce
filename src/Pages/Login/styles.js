@@ -37,6 +37,9 @@ export const HeadLogin = styled.div`
     font-size: 12px;
     margin-bottom: 30px;
   }
+  @media (max-width:499px){
+    width: 80vw;
+  }
 `;
 export const InputLogin = styled.div`
   background-color: white;
@@ -58,6 +61,10 @@ export const InputLogin = styled.div`
     border-radius: 5px;
     font-size: 15px;
     background-color: #f3f3f3;
+  }
+
+  @media (max-width:499px){
+    width: 80vw;
   }
 `;
 
@@ -82,6 +89,9 @@ export const BottomCtn = styled.div`
     cursor: pointer;
     margin-top: 30px;
     color: black;
+  }
+  @media (max-width:499px){
+    width: 80vw;
   }
 `;
 
@@ -117,6 +127,9 @@ export const Register = styled.div`
   }
   button:hover{
     background-color: #4DFD88;
+  }
+  @media (max-width:499px){
+    width: 80vw;
   }
 `;
 export const MsgError = styled.p`

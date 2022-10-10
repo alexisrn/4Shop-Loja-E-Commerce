@@ -17,6 +17,9 @@ export const CtnRegister = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width:499px){
+    width: 80vw;
+  }
 `
 export const HeadRegister = styled.div`
   background-color: white;
@@ -35,6 +38,8 @@ export const HeadRegister = styled.div`
     color: #b9b9b9;
     font-size: 12px;
     margin-bottom: 30px;
+  }@media (max-width:499px){
+    width: 80vw;
   }
 `;
 export const InputLogin = styled.div`
@@ -57,6 +62,8 @@ export const InputLogin = styled.div`
     border-radius: 5px;
     font-size: 15px;
     background-color: #f3f3f3;
+  }@media (max-width:499px){
+    width: 80vw;
   }
 `;
 

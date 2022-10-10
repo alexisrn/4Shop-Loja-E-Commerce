@@ -44,7 +44,12 @@ export const Sidebard = ({ active }) => {
             </ul>
           </nav>
         </S.List>
+        <S.Buttons>
+        <button><Link to='/login'>Entrar</Link></button>
+        <button><Link to='/register'>Registrar</Link></button>
+        </S.Buttons>
       </S.Container>
+      
     </>
   );
 };

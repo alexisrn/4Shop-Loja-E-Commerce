@@ -1,57 +1,50 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import * as S from './styles'
+import { ItemCard } from "../ItemCard";
+import { Header } from "../Header";
+import * as S from "./styles";
+import { Footer } from "../Footer";
+
+const searchUrl = "https://fakestoreapi.com/products";
 
 export function Search() {
-    const [searchParams] = useSearchParams()
-    const [item, setItem] = useState([]);
-    const query = searchParams.get('q');
+  const [searchParams] = useSearchParams();
+  const [item, setItem] = useState([]);
+  const query = searchParams.get("q");
 
-    const url = "https://fakestoreapi.com/products"
-    const getItens = async () => {
-      fetch(url)
-        .then((res) => res.json())
-        .then((json) => setItem(json));
-    };
+  const getSearchedItens = async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
 
-    const filterItens = (name) => {
-      let filterItens = [];
-      for(let i in item){
-        if(item[i].data.name.includes(name)){
-          filterItens.push(item[i]);
-        }
-      }
-      setItem(filterItens);
-    }
-  
-    useEffect(() => {
-      getItens();
-    }, []);
-  return (<>
-  
- <S.Container>
+    setItem(data.results);
+  };
+  useEffect(() => {
+    const searchItem = `${searchUrl}&query=${query}`;
+
+    getSearchedItens(searchItem);
+  }, []);
+  return (
+    <>
+      <Header />
+      <S.Container>
         {item
           ? item.map((product) => {
               return (
                 <>
-                  <S.Card key={product.id}>
-                    <Link to={`/${product.id}`}>
-                      <S.CtnImg>
-                        <S.Img>
-                          <img src={product.image} alt="" />
-                        </S.Img>
-                      </S.CtnImg>
-                      <S.CtnDescription>
-                        <S.Description>{product.category}</S.Description>
-                        <S.Title>{product.title}</S.Title>
-                        <S.Price>${product.price}</S.Price>
-                      </S.CtnDescription>
-                    </Link>
-                  </S.Card>
+                  <ItemCard
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    category={product.category}
+                  />
                 </>
               );
             })
           : null}
-      </S.Container> 
-  </>);
+      </S.Container>
+      <Footer />
+    </>
+  );
 }

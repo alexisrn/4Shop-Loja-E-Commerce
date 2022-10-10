@@ -8,17 +8,24 @@ export function Header() {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!search) return;
 
+    navigate(`/search?q=${search}`);
+    setSearch('');
+  };
 
   return (
+    <>
     <S.Container>
-      <div>
+      <S.Logo>
         <Link to="/">
           <h1>4SHOP</h1>
         </Link>
-      </div>
-      <form >
-        <S.Inputs >
+      </S.Logo>
+      <form onSubmit={handleSubmit}>
+        <S.Inputs>
           <S.BtnSearch>
             <BsSearch />
           </S.BtnSearch>
@@ -26,7 +33,7 @@ export function Header() {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-          ></input>
+          />
         </S.Inputs>
       </form>
       <S.Links>
@@ -46,5 +53,6 @@ export function Header() {
         </ul>
       </S.Links>
     </S.Container>
+    </>
   );
 }

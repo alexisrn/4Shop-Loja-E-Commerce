@@ -14,7 +14,10 @@ export const Container = styled.div`
   }
 
 `;
+export const Logo = styled.div`
 
+
+`
 export const Inputs = styled.div`
   display: flex;
   align-items: center;
@@ -57,6 +60,9 @@ span{
 }
 li{
     cursor: pointer;
+}
+@media (max-width: 499px){
+  display: none;
 }
 
 `
