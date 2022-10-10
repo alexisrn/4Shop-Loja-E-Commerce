@@ -20,7 +20,7 @@ export const Sidebard = ({active}) => {
     <S.Profile>
       <img src={bighead} alt=''/> 
       <div><h2>Username</h2>
-      <p>Ver pefil</p></div>
+      <p>Ver perfil</p></div>
       
     </S.Profile>
     <S.List>
