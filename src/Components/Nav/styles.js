@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Category = styled.div`
@@ -16,3 +19,19 @@ export const Category = styled.div`
   }
 
 `;
+
+export const Icons = styled.div`
+cursor: pointer;
+display: flex;
+column-gap: 10px;
+padding: 0 20px;
+font-size:20px;
+
+a{
+  text-decoration: none;
+  list-style: none;
+  color:black;
+}a:hover{
+  color:grey;
+}
+`
