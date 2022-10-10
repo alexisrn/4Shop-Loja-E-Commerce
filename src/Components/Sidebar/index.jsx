@@ -26,7 +26,7 @@ export const Sidebard = ({active}) => {
     <S.List>
         <nav>
           <ul>
-           <p><Link to ='/jewelery'><li><GiJewelCrown/> Joias</li></Link></p>
+           <Link to ='/jewelery'><li><GiJewelCrown/> Joias</li></Link>
             <Link to='/eletronics'> <li><RiComputerFill/> Eletronicos</li></Link>
             <Link to='/clothing'><li><FaTshirt/> Roupas</li></Link>
           </ul>
