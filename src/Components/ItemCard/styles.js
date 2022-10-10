@@ -26,6 +26,7 @@ export const Card = styled.div`
 `;
 
 export const Img = styled.div`
+padding: 20px 0;
 img{
     width: 100%;
     height: 100px;
