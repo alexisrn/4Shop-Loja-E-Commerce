@@ -7,8 +7,9 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   gap: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 130px;
   margin-top: 10px;
+
 
 `;
 
