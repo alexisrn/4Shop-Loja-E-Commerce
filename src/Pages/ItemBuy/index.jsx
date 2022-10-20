@@ -21,7 +21,7 @@ export function ItemBuy() {
     setItem(data);
   };
 
-  fetch("https://fakestoreapi.com/products/1")
+  fetch("https://fakestoreapi.com/products/")
     .then((res) => res.json())
     .then((json) => setItem(json));
 
