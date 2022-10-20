@@ -116,8 +116,12 @@ export const Register = styled.div`
     color:black;
   }`
 
-  export const MsgError = styled.p`
-  text-align: center;
-  color:red;
-  font-weight: bold;
+  export const MsgError = styled.div`
+
+  p{
+    color:red;
+    text-align: center;
+    font-weight: bold;
+  }
+
   `

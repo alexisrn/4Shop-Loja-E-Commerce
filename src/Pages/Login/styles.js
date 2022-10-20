@@ -133,7 +133,9 @@ export const Register = styled.div`
   }
 `;
 export const MsgError = styled.p`
-text-align: center;
-color:red;
-font-weight: bold;
+p{
+    color:red;
+    text-align: center;
+    font-weight: bold;
+  }
 `

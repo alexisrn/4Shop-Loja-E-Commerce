@@ -48,7 +48,7 @@ export function ItemBuy() {
                 </S.BottomImgs>
               </S.Images>
               <S.Infs>
-                <h2>{item.title}</h2>
+                <S.TitleText>{item.title}</S.TitleText>
                 <S.InfsItem>
                   <section>
                     <p>Cores</p>

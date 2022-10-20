@@ -8,7 +8,8 @@ export const Container = styled.p`
   align-items: center;
   column-gap: 30px;
   flex-direction: column;
- 
+  
+
 `;
 export const ContainerTop = styled.p`
   height: 100%;
@@ -20,7 +21,6 @@ export const ContainerTop = styled.p`
   border-bottom: 1px solid grey;
   margin-bottom: 20px;
   @media (max-width: 550px) {
-    
     flex-direction: column;
   }
  
@@ -72,12 +72,16 @@ export const Infs = styled.div`
   justify-content: center;
   flex-direction: column;
 
-
-
-  h2 {
-    font-size: 35px;
-  }
 `;
+
+export const TitleText = styled.h1`
+font-size: 35px;
+
+@media (max-width: 550px) {
+  text-align: center;
+  font-size: 19px;;
+  }
+`
 
 export const InfsItem = styled.div`
   border-top: 1px solid #b9b9b9;

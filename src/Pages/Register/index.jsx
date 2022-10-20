@@ -63,7 +63,7 @@ export function Register() {
               value={passwordConf}
               onChange={(e)=>[setPasswordConf(e.target.value), setError("")]} />
             </div>
-            <S.MsgError>{error}</S.MsgError>
+            <S.MsgError><p>{error}</p></S.MsgError>
             <S.BottomCtn>
               <button onClick={handleSignup}>Começar</button>
             </S.BottomCtn>

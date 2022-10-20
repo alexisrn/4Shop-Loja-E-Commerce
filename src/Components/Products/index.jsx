@@ -11,15 +11,7 @@ export function Products() {
       .then((json) => setItem(json));
   };
 
-  const filterItens = (name) => {
-    let filterItens = [];
-    for (let i in item) {
-      if (item[i].data.name.includes(name)) {
-        filterItens.push(item[i]);
-      }
-    }
-    setItem(filterItens);
-  };
+  
 
   useEffect(() => {
     getItens();

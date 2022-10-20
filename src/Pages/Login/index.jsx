@@ -53,7 +53,7 @@ export function Login() {
                 value={password}
                 onChange={(e) => [setPassword(e.target.value), setError("")]}
               />
-               <S.MsgError>{error}</S.MsgError>
+               <S.MsgError><p>{error}</p></S.MsgError>
             </div>
             <S.BottomCtn>
               <button onClick={handleLogin}>Entrar</button>
